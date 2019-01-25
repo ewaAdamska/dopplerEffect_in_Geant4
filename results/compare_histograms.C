@@ -118,7 +118,7 @@ int compare_histograms () {
 
 
 
-    c1->SaveAs("LaBr3_doppler_effect.svg");
+    c1->SaveAs("LaBr3_doppler_effect.png");
 
 
     return 0;
