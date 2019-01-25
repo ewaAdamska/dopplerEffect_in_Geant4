@@ -1,5 +1,5 @@
 //
-// $Id: DetectorConstruction.cc 12.16.2016 A. Fijalkowska $
+// $Id: DetectorConstruction.cc 12.16.2016 A. Fijalkowska, edited by E. Adamska  $
 //
 /// \file DetectorConstruction.cc
 /// \brief DetectorConstruction class

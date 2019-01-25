@@ -1,4 +1,4 @@
-// $Id: DetectorConstruction.hh 15.10.2018 A. Fijalkowska $
+// $Id: DetectorConstruction.hh 15.10.2018 A. Fijalkowska, edited by E. Adamska $
 //
 /// \file DetectorConstruction.hh
 /// \brief Kasa trzymająca geometrię detektora

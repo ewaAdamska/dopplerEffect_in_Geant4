@@ -1,5 +1,5 @@
 
-// $Id: EventAction.cc 15.10.2018 A. Fijalkowska $
+// $Id: EventAction.cc 15.10.2018 A. Fijalkowska, edited by E. Adamska  $
 //
 /// \file EventAction.cc
 /// \brief Implementation of the EventAction class
