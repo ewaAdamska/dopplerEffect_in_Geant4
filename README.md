@@ -3,13 +3,16 @@
 
 
 
+
 ## Cel projektu
 
-Celem projektu było uzyskanie funkcji odpowiedzi układu detektorów LaBr3 rejestrującego promieniowanie gamma emitowane przez jon o określonej energii kinetycznej.
+Celem projektu było uzyskanie funkcji odpowiedzi układu detektorów LaBr3 rejestrującego promieniowanie gamma emitowane przez jon o określonej energii kinetycznej, tak aby zaobserwować efekt Dopplera.
 
 ## Geometria układu
 Geometrię wraz z numerami detektorów oraz przyjęty układ współrzędnych przedstawia rysunek.
 ![Geometria układu](geometry.svg)
+
+![Wizualizacja](visualisation.gif)
 
 ## Wyniki
 Wyniki symulacji zamieszczono w folderze '''results'''
