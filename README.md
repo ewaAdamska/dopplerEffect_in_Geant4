@@ -33,7 +33,7 @@ Natomiast dokładny opis geometrii wraz z numerami detektorów oraz przyjętym u
 
 ## Wyniki
 Wyniki symulacji zamieszczono w folderze ```results```.
-Pierszą symulację wykonano dla materiału detektora NaI, ponieważ zaimplementowanie LaBr3 wymagało stworzenia mikstury. Potencjalnie mogło to spowodować jakieś błędy, więc początkowo sprawdzono czy implementacja efektu Dopplera działa dobrze dla znanego materiału detektora.
+Pierszą symulację wykonano dla materiału detektora NaI, ponieważ zaimplementowanie LaBr3 wymagało stworzenia mikstury. Potencjalnie mogło to spowodować jakieś błędy, więc początkowo sprawdzono czy implementacja efektu Dopplera działa dobrze dla materiału detektora dostępnego w bazie NIST.
 
 ![NaI](results/NaI_doppler_effect.png)
 
@@ -41,11 +41,9 @@ Następnie zaimplementowano LaBr3. Wynik zamieszczono poniżej.
 
 ![LaBr3](results/LaBr3_doppler_effect.png)
 
-W obu przypadkach emitowany był kwant gamma o energii ***3000 keV***. Na wszystkich widmach widoczne są piki ucieczki oraz linia 511 keV. Widać również przesunięcia dopplerowskie, a ich kierunek i wielkość odpowiada umiejscowieniu detektora w układzie.
+W obu przypadkach emitowany był kwant gamma o energii **3000 keV**. Na wszystkich widmach widoczne są piki ucieczki oraz linia 511 keV. Widać również przesunięcia dopplerowskie, a ich kierunek i wielkość odpowiada umiejscowieniu detektora w układzie.
 
 
 ## Author
 Ewa Adamska
 
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
