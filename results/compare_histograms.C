@@ -3,7 +3,7 @@ int compare_histograms () {
     Int_t                  id;
     Double_t               energy;
 
-    TFile *f = new TFile("../results/LaBr3_beta002_3000keV.root");
+    TFile *f = new TFile("output.root");
     TTree *t = (TTree*) f->Get ("tree");
 
     t->SetBranchAddress ("id" , &id  );
