@@ -16,7 +16,7 @@ $ ./LaBr3
 
 Wyniki symulacji zapisywane są do drzewa o nazwie ```tree```. Drzewo to ma dwie gałęzie ```id``` oraz ```energy``` odpowiadające numerowi detektora i energii w nim zdeponowanej.
 Drzewo zapisywane jest do pliku ```output.root```. W folderze ```results``` znajduje się makro ```compare_histograms.C```, które wczytuje plik output.root, generuje zestawienie widm detektorów i zapisuje je do pliku.
-
+Przykładowe wyniki zamieszczono również poniżej.
 
 
 ## Cel projektu
