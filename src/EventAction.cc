@@ -53,9 +53,9 @@ void EventAction::EndOfEventAction(const G4Event* anEvent)
     G4THitsMap<G4double>* LaBrEnDep = dynamic_cast <G4THitsMap<G4double>* >
     (hitsCollOfThisEvent->GetHC(LaBrCollId));
 
-    G4double energyDeposit(0);
 
-    for (int i=0; i<=7; i++)
+    int nOfDets = 10;
+    for (int i=0; i!=nOfDets; i++)
     {
         //std::cout<<"test"<<i<<std::endl;
         if((*LaBrEnDep)[i] != 0L)

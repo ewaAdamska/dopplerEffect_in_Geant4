@@ -11,6 +11,8 @@
 #include "G4ParticleGun.hh"
 #include "G4ParticleTable.hh"
 #include "G4GeneralParticleSource.hh"
+#include "G4LorentzVector.hh"
+
 
 class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
@@ -29,6 +31,9 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     G4ThreeVector GenerateIsotropicDirection(G4double randomPhi);
     G4double GeneratePropagationAngle();
     G4double CalculateDopplerEffect(G4double energy, G4double randomPhi, G4double beta);
+
+    G4LorentzVector LorentzTransformation(G4ThreeVector momentum, G4double energy, G4double beta);
+
 };
 
 

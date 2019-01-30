@@ -10,6 +10,7 @@
 #include "Randomize.hh"
 #include "G4ParticleDefinition.hh"
 #include "G4SystemOfUnits.hh"
+#include "G4LorentzVector.hh"
 
 
 PrimaryGeneratorAction::PrimaryGeneratorAction() : G4VUserPrimaryGeneratorAction()
@@ -54,12 +55,20 @@ void PrimaryGeneratorAction::GenerateGammaIncident(G4Event* anEvent)
     G4double randomPhi = GeneratePropagationAngle();
     G4double beta = 0.02;
     G4double gammaEnergy = 3000*keV;
-    G4double energyFromDetectorPointOfRefrence = CalculateDopplerEffect(gammaEnergy, randomPhi, beta);
+
+    // otrzymuję czterowektor lorentza po transofrmacji
+    G4LorentzVector SecondaryVector = LorentzTransformation(GenerateIsotropicDirection(randomPhi), gammaEnergy, beta);
+
+
+
+    G4double energyFromDetectorPointOfRefrence = SecondaryVector.e();
 
     particleGun->SetParticleEnergy(energyFromDetectorPointOfRefrence);
 
     //4. izotropowo
-    particleGun->SetParticleMomentumDirection(GenerateIsotropicDirection(randomPhi));
+
+    G4ThreeVector secondaryDirection = G4ThreeVector(SecondaryVector.x(), SecondaryVector.y(), SecondaryVector.z());
+    particleGun->SetParticleMomentumDirection(secondaryDirection);
 
     //5. wyślij tą cząstkę
     particleGun->GeneratePrimaryVertex(anEvent);
@@ -98,8 +107,22 @@ G4ThreeVector PrimaryGeneratorAction::GenerateIsotropicDirection(G4double random
    G4double z = cos(randomTheta);
 
 
+    return G4ThreeVector(x, y,z);
+}
 
-   return G4ThreeVector(x, y,z);
+G4LorentzVector PrimaryGeneratorAction::LorentzTransformation(G4ThreeVector momentum, G4double energy, G4double beta)
+{
+    G4LorentzVector PrimaryVector = G4LorentzVector();
+
+    PrimaryVector.setPx(energy*momentum.getX());
+    PrimaryVector.setPy(energy*momentum.getY());
+    PrimaryVector.setPx(energy*momentum.getZ());
+    PrimaryVector.setE(energy);
+
+    G4LorentzVector SecondaryVector = PrimaryVector.boostY(beta);
+
+    return PrimaryVector;
+
 }
 
 
