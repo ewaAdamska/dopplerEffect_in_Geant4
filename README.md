@@ -38,11 +38,6 @@ Natomiast dokładny opis geometrii wraz z numerami detektorów oraz przyjętym u
 
 ## Wyniki
 Wyniki symulacji zamieszczono w folderze ```results```.
-Pierszą symulację wykonano dla materiału detektora NaI, ponieważ zaimplementowanie LaBr3 wymagało stworzenia mikstury. Potencjalnie mogło to spowodować jakieś błędy, więc początkowo sprawdzono czy implementacja efektu Dopplera działa dobrze dla materiału detektora dostępnego w bazie NIST.
-
-![NaI](results/NaI_doppler_effect.png)
-
-Następnie zaimplementowano LaBr3. Wynik zamieszczono poniżej.
 
 ![LaBr3](results/LaBr3_doppler_effect.png)
 
